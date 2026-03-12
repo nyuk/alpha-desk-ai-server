@@ -1,2 +1,2 @@
-# alpha-desk-ai-server
-alpha-desk-ai-server
+# alphadesk-backend
+alphadesk-backend
