@@ -4,6 +4,7 @@ from app.domains.news_search.application.request.save_article_request import Sav
 from app.domains.news_search.application.response.save_article_response import SaveArticleResponse
 from app.domains.news_search.application.usecase.article_content_port import ArticleContentPort
 from app.domains.news_search.application.usecase.saved_article_repository_port import SavedArticleRepositoryPort
+from app.domains.news_search.application.usecase.summarization_port import SummarizationPort
 from app.domains.news_search.domain.entity.saved_article import SavedArticle
 
 
@@ -12,9 +13,11 @@ class SaveArticleUseCase:
         self,
         repository: SavedArticleRepositoryPort,
         content_fetcher: ArticleContentPort,
+        summarizer: SummarizationPort,
     ):
         self._repository = repository
         self._content_fetcher = content_fetcher
+        self._summarizer = summarizer
 
     def execute(self, request: SaveArticleRequest) -> SaveArticleResponse:
         existing = self._repository.find_by_link(request.link)
@@ -22,6 +25,7 @@ class SaveArticleUseCase:
             raise HTTPException(status_code=409, detail="이미 저장된 기사입니다.")
 
         content = self._content_fetcher.fetch_content(request.link)
+        summary = self._summarizer.summarize(content) if content else None
 
         article = SavedArticle(
             title=request.title,
@@ -30,6 +34,7 @@ class SaveArticleUseCase:
             snippet=request.snippet,
             published_at=request.published_at,
             content=content,
+            summary=summary,
         )
 
         saved = self._repository.save(article)
@@ -41,6 +46,7 @@ class SaveArticleUseCase:
             source=saved.source,
             snippet=saved.snippet,
             content=saved.content,
+            summary=saved.summary,
             published_at=saved.published_at,
             saved_at=saved.saved_at,
         )

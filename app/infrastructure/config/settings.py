@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     mysql_port: int
     mysql_database: str
     serp_api_key: str = ""
+    anthropic_api_key: str = ""
     debug: bool = False
 
     model_config = {

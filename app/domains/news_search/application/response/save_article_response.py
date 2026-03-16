@@ -11,5 +11,6 @@ class SaveArticleResponse(BaseModel):
     source: str
     snippet: Optional[str] = None
     content: str
+    summary: Optional[str] = None
     published_at: Optional[str] = None
     saved_at: datetime

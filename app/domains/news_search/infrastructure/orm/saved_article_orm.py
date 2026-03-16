@@ -16,6 +16,7 @@ class SavedArticleORM(Base):
     source = Column(String(255), nullable=False, default="")
     snippet = Column(Text, nullable=True)
     content = Column(Text, nullable=False)
+    summary = Column(Text, nullable=True)
     published_at = Column(String(100), nullable=True)
     saved_at = Column(DateTime, default=datetime.now)
 

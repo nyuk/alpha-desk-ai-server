@@ -11,5 +11,6 @@ class SavedArticle:
     content: str
     snippet: Optional[str] = None
     published_at: Optional[str] = None
+    summary: Optional[str] = None
     id: Optional[int] = None
     saved_at: datetime = field(default_factory=datetime.now)

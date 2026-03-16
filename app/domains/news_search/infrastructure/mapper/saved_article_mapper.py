@@ -12,6 +12,7 @@ class SavedArticleMapper:
             source=orm.source,
             snippet=orm.snippet,
             content=orm.content,
+            summary=orm.summary,
             published_at=orm.published_at,
             saved_at=orm.saved_at,
         )
@@ -24,5 +25,6 @@ class SavedArticleMapper:
             source=entity.source,
             snippet=entity.snippet,
             content=entity.content,
+            summary=entity.summary,
             published_at=entity.published_at,
         )

@@ -20,7 +20,14 @@
       "Bash(git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server log --oneline upstream/main)",
       "Bash(git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server log --oneline)",
       "Bash(git stash:*)",
-      "Bash(git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server add . && git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server commit -m \"Initial project setup with FastAPI base structure\" && git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server push origin pr-to-upstream 2>&1)"
+      "Bash(git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server add . && git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server commit -m \"Initial project setup with FastAPI base structure\" && git -C /c/Users/nyuk8/PycharmProjects/alpha-desk/alpha-desk-ai-server push origin pr-to-upstream 2>&1)",
+      "Bash(C:\\\\Users\\\\sey126\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe -m main 2>&1)",
+      "Bash(where python:*)",
+      "Bash(cd:*)",
+      "Bash(python:*)",
+      "Bash(cmd.exe /c \"C:\\\\Users\\\\sey126\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe -m main\" 2>&1)",
+      "Bash(cmd.exe /c \"C:\\\\Users\\\\sey126\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe -m main 2>&1\")",
+      "Bash(cmd.exe /c \"C:\\\\Users\\\\sey126\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe -c \\\\\"import sys; print\\(sys.version\\)\\\\\" 2>&1\")"
     ]
   }
 }
