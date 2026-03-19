@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.domains.account.infrastructure.orm.account_orm import AccountORM  # noqa: F401
 from app.domains.auth.adapter.inbound.api.auth_router import router as auth_router
+from app.domains.pipeline.adapter.inbound.api.pipeline_router import router as pipeline_router
 from app.domains.kakao_auth.adapter.inbound.api.kakao_authentication_router import router as kakao_authentication_router
 from app.domains.news_search.adapter.inbound.api.news_search_router import router as news_search_router
 from app.domains.news_search.adapter.inbound.api.saved_article_router import router as saved_article_router
@@ -41,6 +42,7 @@ app.include_router(watchlist_router)
 app.include_router(collector_router)
 app.include_router(normalizer_router)
 app.include_router(analyzer_router)
+app.include_router(pipeline_router)
 
 
 @app.get("/")
